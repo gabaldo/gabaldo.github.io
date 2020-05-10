@@ -1,0 +1,150 @@
+wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 1fr 50px;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer"
+    ;
+    height: 100vh;
+}
+@media (min-width: 768px) {
+    wrapper {
+        grid-template-columns: 250px repeat(3, 1fr);
+        grid-template-rows: 60px 1fr 50px;
+        grid-template-areas:
+            "header header  header  header"
+            "aside  main    main    main"
+            "aside  footer    footer    footer"
+        ;
+    }
+    /* hide toggle */
+    .toggle {
+        display: none;
+    }
+}
+
+
+.mg-header {
+    background-color: #fff;
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    z-index: 999;
+    //border-bottom: 1px solid #9E9E9E;
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+    &-title {
+        display: flex;
+        justify-self: start;
+        align-items: center;
+    }
+    &-title  h1 {
+        margin-left: 10px;
+    }
+    &-nav ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    &-nav a {
+        padding: 10px;
+    }
+}
+.mg-header a {
+    text-decoration: none;
+    color: #212121;
+}
+
+.mg-main {
+    background-color:#fafafa;
+    display: flex;
+    flex-direction: column;
+    grid-area: main;
+    &-content {
+        padding: 20px;
+    }
+    &-content p {
+        margin: 0;
+        padding: 0;
+        line-height: 25px;
+        color: #212121;
+    }
+}
+
+.mg-aside {
+    background-color: #212121;
+    grid-area: aside;
+    z-index: 998;
+    &-nav {
+        margin: 0;
+        padding: 0;
+    }
+    &-nav ul {
+        margin: 0;
+        padding: 0;
+        margin-top: 20px;
+        list-style: none;
+    }
+    
+    &-nav a {
+        display: block;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: white;
+        
+    }
+    &-nav a:hover {
+        background-color: #263238;
+    }
+    &-nav span {
+        margin-left: 10px;
+    }
+}
+.mg-footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    background-color:#fafafa;
+}
+/* media query for nav styles */
+@media only screen and (max-width: 767px) {
+    
+    #aside {
+      transition: transform .3s ease-in-out;
+      top: 0;
+      bottom: 0;   
+      min-height: 100vh; /* override Safari bug */
+      position: fixed; /* or choose `absolute` depending on desired behavior*/
+      width: 250px;
+      left: -250px;
+      z-index: 999;
+    }
+  
+    #aside:target {     
+      transform: translateX(250px);
+    }
+    .mg-aside-toggle {
+        display: flex; // posicionar individualmente botao fechar
+        height: 60px;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0 10px;
+    }
+    .mg-aside-toggle a {
+        text-decoration: none;
+        color: white;
+    }
+    .mg-aside-toggle a:hover {
+        color: #B0BEC5;
+    }
+    .toggle {
+        text-decoration: none;
+        padding: 10px;
+    }  
+}

@@ -76,7 +76,7 @@ wrapper {
 }
 
 .mg-aside {
-  background-color: #363636;
+  background-color: #424242;
   grid-area: aside;
   z-index: 998;
 }
@@ -97,14 +97,27 @@ wrapper {
   color: white;
 }
 .mg-aside-nav a:hover {
-  background-color: #263238;
+  background-color: #212121;
+  color: #9E9E9E;
 }
 .mg-aside-nav span {
   margin-left: 10px;
 }
 
-.toggle {
+.js-offcanvas-triggerOpen {
   padding: 10px;
+}
+
+.js-offcanvas-triggerOpen i:hover {
+  color: #757575;
+}
+
+.js-offcanvas-triggerClose {
+  padding: 10px;
+}
+
+.js-offcanvas-triggerClose i:hover {
+  color: #9E9E9E;
 }
 
 .mg-footer {
@@ -126,7 +139,6 @@ wrapper {
 @media only screen and (max-width: 767px) {
   .mg-aside {
     align-items: center;
-    background-color: #363636;
     color: #fcfcfc;
     height: 100vh;
     justify-content: center;

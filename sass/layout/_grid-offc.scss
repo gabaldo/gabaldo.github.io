@@ -83,7 +83,7 @@ wrapper {
 }
 
 .mg-aside {
-    background-color: #363636;
+    background-color: #424242;
     grid-area: aside;
     z-index: 998;
     &-nav {
@@ -105,15 +105,25 @@ wrapper {
         
     }
     &-nav a:hover {
-        background-color: #263238;
+        background-color: #212121;
+        color: #9E9E9E;
     }
     &-nav span {
         margin-left: 10px;
     }
 }
-    .toggle {
-        padding: 10px;
-    } 
+.js-offcanvas-triggerOpen {
+    padding: 10px;
+}
+.js-offcanvas-triggerOpen i:hover {
+    color: #757575;
+}
+.js-offcanvas-triggerClose {
+    padding: 10px;
+}
+.js-offcanvas-triggerClose i:hover {
+    color: #9E9E9E;
+} 
 .mg-footer {
     grid-area: footer;
     display: flex;

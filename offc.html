@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
-    <link rel="stylesheet" href="css/dash.css">
+    <link rel="stylesheet" href="css/offc.css">
     <script src="https://kit.fontawesome.com/59d9c90251.js" crossorigin="anonymous"></script>
-    <title>Dashboard</title>
+    <title>Desenvolvimento de Pessoas</title>
 </head>
 
 <body>
     <wrapper class="wrapper">
         <header class="mg-header">
             <div class="mg-header-title">
-                <a class="toggle open" href="#aside">
+                <a class="toggle js-offcanvas-triggerOpen" type="button">
                     <i class="fas fa-align-justify"></i>
                 </a>
                 <a href="">
-                    <h1>Dashboard</h1>
+                    <h1>Desenvolvimento de Pessoas</h1>
                 </a>
             </div>
             <div class="mg-header-nav">
@@ -29,9 +29,9 @@
                 </ul>
             </div>
         </header>
-        <aside id="aside" class="mg-aside">
+        <aside class="mg-aside js-offcanvas-menu">
             <div class="mg-aside-toggle">
-                <a class="toggle" href="#">
+                <a class="toggle js-offcanvas-triggerClose" type="button">
                     <i class="fas fa-times"></i>
                 </a>
             </div>
@@ -128,6 +128,21 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+    <script>
+        const triggerOpen = document.querySelector('.js-offcanvas-triggerOpen')
+        const triggerClose = document.querySelector('.js-offcanvas-triggerClose')
+        const offcanvas = document.querySelector('.js-offcanvas-menu')
+
+        triggerOpen.addEventListener('click', toggleMobileMenuOpen)
+        triggerClose.addEventListener('click', toggleMobileMenuClose)
+
+        function toggleMobileMenuOpen() {
+            offcanvas.classList.add('is-active')
+        }
+        function toggleMobileMenuClose() {
+            offcanvas.classList.remove('is-active')
+        }
+    </script>
 </body>
 
 </html>

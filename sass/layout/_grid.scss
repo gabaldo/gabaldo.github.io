@@ -46,6 +46,7 @@ wrapper {
     &-title  h1 {
         margin: 0;
         margin-left: 10px;
+        font-size: 1.3rem;
     }
     &-nav ul {
         display: flex;
@@ -119,40 +120,4 @@ wrapper {
     padding: 0;
     font-size: small;
     color: #212121;
-}
-/* media query for nav styles */
-@media only screen and (max-width: 767px) {
-    
-    #aside {
-      transition: transform .3s ease-in-out;
-      top: 0;
-      bottom: 0;   
-      min-height: 100vh; /* override Safari bug */
-      position: fixed; /* or choose `absolute` depending on desired behavior*/
-      width: 250px;
-      left: -250px;
-      z-index: 999;
-    }
-  
-    #aside:target {     
-      transform: translateX(250px);
-    }
-    .mg-aside-toggle {
-        display: flex; // posicionar individualmente botao fechar
-        height: 60px;
-        justify-content: flex-end;
-        align-items: center;
-        padding: 0 10px;
-    }
-    .mg-aside-toggle a {
-        text-decoration: none;
-        color: white;
-    }
-    .mg-aside-toggle a:hover {
-        color: #B0BEC5;
-    }
-    .toggle {
-        text-decoration: none;
-        padding: 10px;
-    }  
 }

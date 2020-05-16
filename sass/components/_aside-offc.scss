@@ -1,0 +1,34 @@
+/* media query for nav styles */
+@media only screen and (max-width: 767px) {
+    .mg-aside {
+        align-items: center;
+        background-color: #363636;
+        color: #fcfcfc;
+        height: 100vh;
+        justify-content: center;
+        left: 0;
+        position: fixed;
+        top: 0;
+        transform: translateX(-100%);
+        transition: all 235ms cubic-bezier(.95, .05, .795, .035);
+        width: 250px;
+        &-nav {
+            margin: 0;
+            padding: 0;
+        }
+        &-toggle {
+            display: flex; // posicionar individualmente botao fechar
+            height: 60px;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 10px;
+        }
+      }
+
+      .mg-aside.is-active {
+        transform: none;
+        z-index: 999;
+        transition: all 205ms cubic-bezier(.19, 1, .22, 1);
+      }
+
+}

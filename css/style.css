@@ -38,6 +38,7 @@ wrapper {
 .mg-header-title h1 {
   margin: 0;
   margin-left: 10px;
+  font-size: 1.3rem;
 }
 .mg-header-nav ul {
   display: flex;
@@ -155,4 +156,4 @@ wrapper {
   }
 }
 
-/*# sourceMappingURL=dash.css.map */
+/*# sourceMappingURL=style.css.map */

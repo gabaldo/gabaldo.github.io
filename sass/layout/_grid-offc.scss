@@ -1,4 +1,5 @@
-wrapper {
+
+.mg-wrapper {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 60px 1fr 50px;
@@ -10,7 +11,7 @@ wrapper {
     height: 100vh;
 }
 @media (min-width: 768px) {
-    wrapper {
+    .mg-wrapper {
         grid-template-columns: 250px repeat(3, 1fr);
         grid-template-rows: 60px 1fr 50px;
         grid-template-areas:
@@ -36,7 +37,7 @@ wrapper {
     justify-content: space-between;
     align-items: center;
     padding: 0 10px;
-    z-index: 999;
+    z-index: 996;
     //border-bottom: 1px solid #9E9E9E;
     -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
@@ -71,6 +72,7 @@ wrapper {
     display: flex;
     flex-direction: column;
     grid-area: main;
+    z-index: 995;
     &-content {
         padding: 20px;
     }

@@ -1,4 +1,4 @@
-wrapper {
+.mg-wrapper {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 60px 1fr 50px;
@@ -7,7 +7,7 @@ wrapper {
 }
 
 @media (min-width: 768px) {
-  wrapper {
+  .mg-wrapper {
     grid-template-columns: 250px repeat(3, 1fr);
     grid-template-rows: 60px 1fr 50px;
     grid-template-areas: "header header  header  header" "aside  main    main    main" "aside  footer    footer    footer";
@@ -29,7 +29,7 @@ wrapper {
   justify-content: space-between;
   align-items: center;
   padding: 0 10px;
-  z-index: 999;
+  z-index: 996;
   -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
@@ -64,6 +64,7 @@ wrapper {
   display: flex;
   flex-direction: column;
   grid-area: main;
+  z-index: 995;
 }
 .mg-main-content {
   padding: 20px;
@@ -165,6 +166,24 @@ wrapper {
     transform: none;
     z-index: 999;
     transition: all 205ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  .overlay {
+    position: fixed;
+    /* Sit on top of the page content */
+    display: none;
+    /* Hidden by default */
+    width: 100%;
+    /* Full width (cover the whole page) */
+    height: 100%;
+    /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black background with opacity */
+    z-index: 998;
   }
 }
 

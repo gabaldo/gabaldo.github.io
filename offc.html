@@ -12,23 +12,8 @@
 </head>
 
 <body>
-    <wrapper class="wrapper">
-        <header class="mg-header">
-            <div class="mg-header-title">
-                <a class="toggle js-offcanvas-triggerOpen" type="button">
-                    <i class="fas fa-align-justify"></i>
-                </a>
-                <a href="">
-                    <h1>Desenvolvimento de Pessoas</h1>
-                </a>
-            </div>
-            <div class="mg-header-nav">
-                <ul>
-                    <li><a href=""><i class="fas fa-user-cog"></i></a></li>
-                    <li><a href=""><i class="fas fa-power-off"></i></a></li>
-                </ul>
-            </div>
-        </header>
+    <wrapper class="mg-wrapper">
+        <div class=""></div>
         <aside class="mg-aside js-offcanvas-menu">
             <div class="mg-aside-toggle">
                 <a class="toggle js-offcanvas-triggerClose" type="button">
@@ -43,6 +28,23 @@
                 </ul>
             </nav>
         </aside>
+        <div class="overlay"></div>
+        <header class="mg-header">
+            <div class="mg-header-title">
+                <a class="toggle js-offcanvas-triggerOpen" type="button" onclick="on()">
+                    <i class="fas fa-align-justify"></i>
+                </a>
+                <a href="">
+                    <h1>Desenvolvimento de Pessoas</h1>
+                </a>
+            </div>
+            <div class="mg-header-nav">
+                <ul>
+                    <li><a href=""><i class="fas fa-user-cog"></i></a></li>
+                    <li><a href=""><i class="fas fa-power-off"></i></a></li>
+                </ul>
+            </div>
+        </header>
         <main class="mg-main">
             <section class="mg-main-content">
                 <div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -138,9 +140,11 @@
 
         function toggleMobileMenuOpen() {
             offcanvas.classList.add('is-active')
+            document.querySelector(".overlay").style.display = "block";
         }
         function toggleMobileMenuClose() {
-            offcanvas.classList.remove('is-active')
+            offcanvas.classList.remove('is-active');
+            document.querySelector(".overlay").style.display = "none";
         }
     </script>
 </body>
